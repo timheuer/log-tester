@@ -1,6 +1,7 @@
 {
   "name": "log-tester",
   "displayName": "log-tester",
+  "publisher": "timheuer",
   "description": "Demonstrates difference between OutputChannel and LogOutputChannel",
   "version": "0.0.1",
   "engines": {
@@ -9,19 +10,43 @@
   "categories": [
     "Other"
   ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timheuer/log-tester/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timheuer/log-tester"
+  },
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "log-tester.helloWorld",
-        "title": "Hello World"
-      },
-      {
         "command": "log-tester.startLogging",
         "title": "Start Logging"
+      },
+      {
+        "command": "log-tester.reportIssue",
+        "title": "Report Issue",
+        "icon": "$(bug)"
       }
-    ]
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "log-tester.reportIssue",
+          "when": "true",
+          "group": "2_help"
+        }
+      ],
+      "issue/reporter": [
+        {
+        "command": "log-tester.reportIssue",
+        "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

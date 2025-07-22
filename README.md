@@ -12,6 +12,21 @@ This extension is a sample for Visual Studio Code that demonstrates the differen
 - Provides sample commands to write messages to each channel and observe their behavior in the VS Code UI.
 
 
+## Issue Reporter Functionality
+
+### Reporting Issues with Log Output
+
+This extension provides a command to help you report issues directly to the extension author. When you run the `Report Issue` command, the extension automatically collects the latest log output from the LogOutputChannel and includes it in the issue report form. This makes it easier to provide relevant diagnostic information when submitting a bug or feedback.
+
+**How to use:**
+
+- Open the Command Palette (`Ctrl+Shift+P`)
+- Run `Log Tester: Report Issue`
+- The issue reporter will open with the log output automatically attached
+
+This helps ensure that your issue reports contain all the necessary context for troubleshooting.
+
+
 ## LogOutputChannel vs OutputChannel
 
 ### LogOutputChannel
