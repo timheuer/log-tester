@@ -42,8 +42,8 @@
       ],
       "issue/reporter": [
         {
-        "command": "log-tester.reportIssue",
-        "group": "navigation"
+          "command": "log-tester.reportIssue",
+          "group": "navigation"
         }
       ]
     }
@@ -67,5 +67,8 @@
     "glob": "^11.0.3",
     "mocha": "^10.2.0",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@timheuer/vscode-ext-logger": "^0.1.18"
   }
 }
